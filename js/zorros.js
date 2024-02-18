@@ -1,5 +1,4 @@
 const geleria = document.querySelector(".cajaGaleria");
-
 async function ObtenerZorros() {
   try {
     

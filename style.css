@@ -66,6 +66,7 @@ a:hover{
 
 .opciones {
   position: relative;
+  cursor: default;
 }
 
 .opcionesHijas {

@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(71, 5, 65, 0.877);
+  backdrop-filter: blur(2px);
+  margin-bottom: 21px;
+  
+}
+body {
+  background-color: rgba(9, 5, 71, 0.877);
+}
+.presentacion {
+  margin: 110px auto;
+
+  width: 600px;
+  height: 350px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(205, 173, 214, 0.3) 0%,
+      rgba(255, 88, 240, 0.2) 49%,
+      rgba(176, 84, 168, 0.6) 100%
+    ),
+    url(shepherd-dog-4357790_1280.jpg);
+
+  background-size: cover;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  text-shadow: 2px 2px 1px black;
+  
+}
+.lista {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 2rem;
+  padding: 1px 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a,
+.opciones {
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+    text-shadow: 3px 5px 3px black;
+
+}
+
+.opciones {
+  position: relative;
+}
+
+.opcionesHijas {
+  width: 100%;
+  display: none;
+  position: absolute;
+  padding: 2px 7.3px;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.opciones:hover {
+  transition: 0.3s background;
+}
+.opciones:hover .opcionesHijas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(71, 5, 65, 0.677);
+}
+
+.opcionesHijas a:hover {
+  background-color: rgba(10, 1, 10, 0.37);
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.cajaGaleria {
+  width: 95vw;
+
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.spinner {
+  margin: 30px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  animation: spin 1s linear infinite;
+  border-bottom-color: white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.perro{
+  width: 350px;
+  height: 350px;
+}
+
+.perro:hover {
+  transform: scale(1.02);
+  transition: 0.2s all linear;
+}
+
+
+@media (max-width:600px) {
+    .presentacion{
+        height: 400px;
+        width: 90vw;
+        background-position: center;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .lista{
+      
+      gap: 20px;
+      justify-content: space-around;
+    }
+}

@@ -1,6 +1,6 @@
-const geleria = document.querySelector(".cajaGaleria");
 
-async function ObtenerGatito() {
+export async function ObtenerGatito() {
+  const geleria = document.querySelector(".cajaGaleria");
     const url = `https://api.thecatapi.com/v1/images/search?limit=20`;
     const api_key = "DEMO_API_KEY"
 
@@ -25,8 +25,3 @@ async function ObtenerGatito() {
 
 
 
-window.addEventListener("scroll", () =>{
-    const  {clientHeight, scrollHeight, scrollTop} = document.documentElement
-    scrollTop + clientHeight > scrollHeight - 5 && ObtenerGatito()
-})
-ObtenerGatito()

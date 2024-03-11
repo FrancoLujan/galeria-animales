@@ -1,5 +1,5 @@
 const geleria = document.querySelector(".cajaGaleria");
-async function ObtenerZorros() {
+export async function ObtenerZorros() {
   try {
     
     for(let i = 0; i < 6; i++){
@@ -15,9 +15,3 @@ async function ObtenerZorros() {
   }
 }
 
-window.addEventListener("scroll", () =>{
-    const  {clientHeight, scrollHeight, scrollTop} = document.documentElement
-    scrollTop + clientHeight > scrollHeight - 5 && ObtenerZorros()
-})
-
-ObtenerZorros()

@@ -1,6 +1,6 @@
 const geleria = document.querySelector(".cajaGaleria");
 
-async function ObtenerPerritos() {
+export async function ObtenerPerritos() {
   try {
     let promesa = await fetch("https://dog.ceo/api/breeds/image/random/10");
 
@@ -15,8 +15,3 @@ async function ObtenerPerritos() {
 
 
 
-window.addEventListener("scroll", () =>{
-    const  {clientHeight, scrollHeight, scrollTop} = document.documentElement
-    scrollTop + clientHeight > scrollHeight - 5 && ObtenerPerritos()
-})
-ObtenerPerritos()

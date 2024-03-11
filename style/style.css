@@ -1,47 +1,64 @@
 * {
   box-sizing: border-box;
   margin: 0px;
+ 
 }
 
 header {
   position: sticky;
   top: 0px;
-  width: 100%;
-  z-index: 1;
+  width: 100vw;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(71, 5, 65, 0.877);
+  background-color: rgba(1, 1, 26, 0.877);
   backdrop-filter: blur(2px);
   margin-bottom: 21px;
-  
 }
 body {
-  background-color: rgba(9, 5, 71, 0.877);
+  background-color:  #010105;
+  overflow-x: hidden;
+  
 }
-.presentacion {
-  margin: 110px auto;
+body::-webkit-scrollbar{
+  width: 7px;
+  z-index: -11;
+  
+  
+}
+body::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  height: 5px;
+  border: 2px solid rgba(4, 4, 158, 0.877);
+  border-radius: 20px;
+}
 
-  width: 600px;
-  height: 350px;
+.presentacion {
+  
+  margin: 0px auto;
+  margin-top: 100px;
+
+  width: 65vw;
+  height: 450px;
   background-image: linear-gradient(
-      90deg,
-      rgba(205, 173, 214, 0.3) 0%,
-      rgba(255, 88, 240, 0.2) 49%,
-      rgba(176, 84, 168, 0.6) 100%
+      90deg,rgb(31, 30, 30, 0.75), rgb(31,30,30, 0.55)
+
     ),
-    url(shepherd-dog-4357790_1280.jpg);
+    url(/img/shepherd-dog-4357790_1280.jpg);
 
   background-size: cover;
-  
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: white;
   font-family: "Kdam Thmor Pro", sans-serif;
   text-shadow: 2px 2px 1px black;
-  
+  text-align: center;
 }
 .lista {
   width: 70vw;
@@ -57,12 +74,20 @@ body {
 a,
 .opciones {
   color: white;
-  text-decoration: none;
+  text-decoration:none;
+  
 }
-a:hover{
-    text-shadow: 3px 5px 3px black;
+
+a{
+  transition: text-shadow .2s, scale .2s;
 
 }
+a:hover{
+  text-shadow: 0px 0px 10px white;
+  
+  
+}
+
 
 .opciones {
   position: relative;
@@ -85,11 +110,11 @@ a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(71, 5, 65, 0.677);
+  background-color:rgba(1, 1, 26, 0.877);
 }
 
 .opcionesHijas a:hover {
-  background-color: rgba(10, 1, 10, 0.37);
+  background-color: rgba(35, 26, 114, 0.37);
   width: 100%;
   color: white;
   text-align: center;
@@ -101,7 +126,8 @@ a:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+
+  gap: 45px;
 }
 
 .spinner {
@@ -122,28 +148,28 @@ a:hover{
     transform: rotate(360deg);
   }
 }
-.perro{
+.perro {
   width: 350px;
   height: 350px;
+  transition: 0.3s transform linear;
 }
 
 .perro:hover {
-  transform: scale(1.02);
-  transition: 0.2s all linear;
+  transform: scale(1.1);
 }
 
+@media (width < 600px) {
+  .presentacion {
+    height: 350px;
+    width: 95vw;
 
-@media (max-width:600px) {
-    .presentacion{
-        height: 400px;
-        width: 90vw;
-        background-position: center;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-    .lista{
-      
-      gap: 20px;
-      justify-content: space-around;
-    }
+    background-size: cover;
+
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .lista {
+    gap: 20px;
+    justify-content: space-around;
+  }
 }

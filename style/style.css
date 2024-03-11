@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb{
       90deg,rgb(31, 30, 30, 0.75), rgb(31,30,30, 0.55)
 
     ),
-    url(/img/shepherd-dog-4357790_1280.jpg);
+    url(../img/shepherd-dog-4357790_1280.jpg);
 
   background-size: cover;
   background-position: center;
